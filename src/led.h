@@ -16,9 +16,9 @@
  */
 typedef struct {
 	uint8_t status;				// Aktualny stan diody
-	uint8_t pin;				// Pin na którym znajduje siê dioda
+	uint8_t pin;				// Pin na ktÃ³rym znajduje siÄ™ dioda
 	volatile uint8_t *ddr;		// Rejestr kierunku
-	volatile uint8_t *port;		// Rejestr wyjœcia
+	volatile uint8_t *port;		// Rejestr wyjÅ›cia
 } YourFrog_LED;
 
 /**
@@ -27,17 +27,17 @@ typedef struct {
 YourFrog_LED *led_init(volatile uint8_t *ddr, volatile uint8_t *port, uint8_t pin);
 
 /**
- * 	W³¹czenie diody
+ * 	WÅ‚Ä…czenie diody
  */
 void led_on(YourFrog_LED *led);
 
 /**
- * 	Wy³¹czenie diody
+ * 	WyÅ‚Ä…czenie diody
  */
 void led_off(YourFrog_LED *led);
 
 /**
- * 	Przestawienie diody, W przypadku braku wiedzy w jakim stanie siê znajduje zostanie w³¹czona
+ * 	Przestawienie diody, W przypadku braku wiedzy w jakim stanie siÄ™ znajduje zostanie wÅ‚Ä…czona
  */
 void led_toggle(YourFrog_LED *led);
 
